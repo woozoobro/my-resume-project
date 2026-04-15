@@ -1,0 +1,254 @@
+/* ==== VSCode Markdown Preview - Things Theme ==== */
+/* Inspired by https://github.com/colineckert/obsidian-things */
+
+/* 공통 변수 (Things Palette) */
+.vscode-body {
+  /* Things Colors */
+  --things-blue: #2e80f2;
+  --things-pink: #ff82b2;
+  --things-green: #3eb4bf;
+  --things-yellow: #e5b567;
+  --things-red: #e83e3e;
+  --things-purple: #a882ff;
+
+  --things-font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    "Segoe UI", Roboto, Inter, Ubuntu, sans-serif;
+  --things-font-mono: "SF Mono", "JetBrains Mono", "Fira Code", Menlo,
+    Consolas, monospace;
+
+  --things-h1-size: 1.7rem;
+  --things-h2-size: 1.5rem;
+  --things-h3-size: 1.2rem;
+  --things-h4-size: 1.1rem;
+  --things-h5-size: 1rem;
+  --things-h6-size: 0.9rem;
+
+  --things-radius-s: 4px;
+  --things-radius-m: 8px;
+}
+
+/* ===== 라이트 테마 ===== */
+.vscode-body.vscode-light {
+  --things-bg: #ffffff;
+  --things-bg-secondary: #f5f5f7;
+  --things-text: #1d1d1f;
+  --things-text-muted: #6e6e73;
+  --things-border: rgba(0, 0, 0, 0.08);
+
+  background-color: var(--things-bg);
+  color: var(--things-text);
+  font-family: var(--things-font-sans);
+  line-height: 1.65;
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem;
+}
+
+/* ===== 다크 테마 ===== */
+.vscode-body.vscode-dark {
+  --things-bg: #1c1c1e;
+  --things-bg-secondary: #2c2c2e;
+  --things-text: #f5f5f7;
+  --things-text-muted: #98989d;
+  --things-border: rgba(255, 255, 255, 0.1);
+
+  background-color: var(--things-bg);
+  color: var(--things-text);
+  font-family: var(--things-font-sans);
+  line-height: 1.65;
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem;
+}
+
+/* 기본 텍스트 */
+.vscode-body p {
+  margin: 0.75rem 0;
+}
+
+/* 헤딩 공통 */
+.vscode-body h1,
+.vscode-body h2,
+.vscode-body h3,
+.vscode-body h4,
+.vscode-body h5,
+.vscode-body h6 {
+  font-family: var(--things-font-sans);
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+/* h1 */
+.vscode-body h1 {
+  font-size: var(--things-h1-size);
+  font-weight: 700;
+  color: var(--things-blue);
+  border-bottom: 1px solid var(--things-border);
+  padding-bottom: 0.4rem;
+}
+
+/* h2 */
+.vscode-body h2 {
+  font-size: var(--things-h2-size);
+  font-weight: 700;
+  color: var(--things-blue);
+}
+
+/* h3 */
+.vscode-body h3 {
+  font-size: var(--things-h3-size);
+  color: var(--things-text);
+}
+
+/* h4 */
+.vscode-body h4 {
+  font-size: var(--things-h4-size);
+  color: var(--things-yellow);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+}
+
+/* h5 */
+.vscode-body h5 {
+  font-size: var(--things-h5-size);
+  color: var(--things-red);
+  font-weight: 500;
+}
+
+/* h6 */
+.vscode-body h6 {
+  font-size: var(--things-h6-size);
+  color: var(--things-text-muted);
+  font-weight: 400;
+}
+
+/* 링크 */
+.vscode-body a {
+  color: var(--things-blue);
+  text-decoration: none;
+}
+.vscode-body a:hover {
+  text-decoration: underline;
+}
+
+/* Bold & Italic - Things 특유의 핑크 */
+.vscode-body strong {
+  color: var(--things-pink);
+  font-weight: 600;
+}
+.vscode-body em {
+  color: var(--things-pink);
+  font-style: italic;
+}
+
+/* 인라인 코드 */
+.vscode-body code {
+  font-family: var(--things-font-mono);
+  font-size: 0.88em;
+  padding: 0.15em 0.4em;
+  border-radius: var(--things-radius-s);
+  background-color: var(--things-bg-secondary);
+}
+
+/* 코드 블록 */
+.vscode-body pre {
+  padding: 1rem 1.2rem;
+  border-radius: var(--things-radius-m);
+  overflow-x: auto;
+  background-color: var(--things-bg-secondary);
+  border: 1px solid var(--things-border);
+}
+.vscode-body pre code {
+  background: transparent;
+  padding: 0;
+}
+
+/* 리스트 */
+.vscode-body ul,
+.vscode-body ol {
+  padding-left: 1.5rem;
+}
+.vscode-body li {
+  margin: 0.25rem 0;
+}
+.vscode-body li::marker {
+  color: var(--things-text-muted);
+}
+
+/* 인용문 - Things 그린 */
+.vscode-body blockquote {
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+  border-left: 3px solid var(--things-green);
+  background-color: var(--things-bg-secondary);
+  border-radius: 0 var(--things-radius-s) var(--things-radius-s) 0;
+  font-style: italic;
+  color: var(--things-text-muted);
+}
+
+/* 하이라이트 */
+.vscode-body mark {
+  background-color: rgba(229, 181, 103, 0.25);
+  color: inherit;
+  padding: 0.1em 0.2em;
+  border-radius: 2px;
+}
+
+/* 이미지 */
+.vscode-body img {
+  max-width: 100%;
+  border-radius: var(--things-radius-m);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 구분선 */
+.vscode-body hr {
+  border: none;
+  height: 1px;
+  background-color: var(--things-border);
+  margin: 2rem 0;
+}
+
+/* 테이블 */
+.vscode-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.95em;
+}
+.vscode-body th,
+.vscode-body td {
+  padding: 0.6rem 0.75rem;
+  border: 1px solid var(--things-border);
+  text-align: left;
+}
+.vscode-body th {
+  background-color: var(--things-bg-secondary);
+  font-weight: 600;
+}
+
+/* 체크박스 */
+.vscode-body input[type="checkbox"] {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  accent-color: var(--things-blue);
+  vertical-align: middle;
+  margin-right: 0.4rem;
+}
+
+/* 태그 스타일 링크 (#tag) */
+.vscode-body a[href^="#"] {
+  font-size: 0.85em;
+  padding: 0.15em 0.6em;
+  border-radius: 999px;
+  text-decoration: none;
+  background-color: rgba(46, 128, 242, 0.12);
+  color: var(--things-blue);
+}
+.vscode-body a[href^="#"]:hover {
+  background-color: rgba(46, 128, 242, 0.2);
+}
